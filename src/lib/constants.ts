@@ -231,12 +231,12 @@ export const PORTFOLIO_OBRAS: Obra[] = [
   },
   {
     slug: "core-internacional",
-    title: "Core Internacional",
+    title: "Coree International School",
     location: "Joinville/SC",
-    client: "Core Internacional",
+    client: "Coree International School",
     type: "Cobertura Metálica",
     description:
-      "No empreendimento Core Internacional, em Joinville, a Metalgalvano executou soluções metálicas que unem resistência, funcionalidade e estética, incluindo coberturas metálicas, brises arquitetônicos, pergolados, rampa caracol, passarela e escadas metálicas.",
+      "No empreendimento Coree International School, em Joinville, a Metalgalvano executou soluções metálicas que unem resistência, funcionalidade e estética, incluindo coberturas metálicas, brises arquitetônicos, pergolados, rampa caracol, passarela e escadas metálicas.",
     highlights: [
       "1.820m² de coberturas metálicas",
       "168m² de pergolados",
