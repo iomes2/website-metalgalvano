@@ -494,7 +494,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "Entregue em 45 dias",
       "1.770m² de estrutura para ACM",
     ],
-    coverImage: "/images/obra18-almeida-junior-bc/almeida-junior-bc-1.jpg",
+    coverImage: "/images/obra18-almeida-junior-bc/almeida-junior-bc-6.jpg",
     images: [
       "/images/obra18-almeida-junior-bc/almeida-junior-bc-1.jpg",
       "/images/obra18-almeida-junior-bc/almeida-junior-bc-2.jpg",
