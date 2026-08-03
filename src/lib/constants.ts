@@ -293,7 +293,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "207m² de estruturas metálicas",
       "Acabamento em galvanização a fogo",
     ],
-    coverImage: "/images/obra8-escritorio-krona/krona-2.jpeg",
+    coverImage: "/images/obra8-escritorio-krona/krona-4.jpeg",
     images: [
       "/images/obra8-escritorio-krona/krona-1.jpg",
       "/images/obra8-escritorio-krona/krona-2.jpeg",
