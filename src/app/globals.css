@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Paleta da marca: cinza e azul da logo Metalgalvano */
+  --color-primary: #3d4042;
+  --color-primary-light: #56595c;
+  --color-primary-dark: #26282b;
+  --color-secondary: #6b6e70;
+  --color-accent: #0077a9;
+  --color-accent-hover: #005f88;
+  --color-accent-light: #29a3d8;
+  --color-background: #ffffff;
+  --color-foreground: #26282b;
+  --color-muted: #f2f2f3;
+  --color-muted-foreground: #6b6e70;
+  --color-border: #e3e3e4;
+  --color-surface: #f7f7f8;
+  --font-heading: "Lexend", sans-serif;
+  --font-body: "Source Sans 3", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-foreground);
+  background: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Client logo slider keyframes */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes scroll-right {
+  0% { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
