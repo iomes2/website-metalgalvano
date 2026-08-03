@@ -595,7 +595,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
   },
   {
     slug: "sesi-videira",
-    title: "Escola SESI — Videira",
+    title: "Escola SESI",
     location: "Videira/SC",
     client: "SESI",
     type: "Cobertura Metálica",
