@@ -19,6 +19,9 @@
   --font-body: "Source Sans 3", sans-serif;
 }
 
+/* A área de overscroll (elástico) usa o fundo do html. O body fica sem fundo
+   próprio para que nenhum branco vaze nas bordas — o branco das páginas vem
+   do <main>. */
 html {
   background-color: var(--color-primary-dark);
 }
@@ -26,7 +29,7 @@ html {
 body {
   font-family: var(--font-body);
   color: var(--color-foreground);
-  background: var(--color-background);
+  background: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

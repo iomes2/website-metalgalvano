@@ -7,8 +7,9 @@ export function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
+        {/* No mobile: navegação e soluções lado a lado; contato centralizado abaixo */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+          <div className="col-span-2 lg:col-span-1">
             <div className="mb-6">
               <Image
                 src="/logo_com_icone_transparente.png"
@@ -118,11 +119,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="col-span-2 lg:col-span-1 flex flex-col items-center lg:items-start">
             <h3 className="font-heading font-semibold text-lg mb-6">
               Contato
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-left">
               <li className="flex items-start gap-3 text-sm text-white/70">
                 <MapPin className="w-5 h-5 shrink-0 mt-0.5" />
                 <span>

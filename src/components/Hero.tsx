@@ -67,10 +67,6 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
           {/* Conteúdo */}
           <div className="lg:col-span-7">
-            <p className="flex items-center gap-3 text-accent-light font-heading font-medium text-sm uppercase tracking-widest mb-5">
-              <span aria-hidden className="w-8 h-[2px] bg-accent-light" />
-              Fábrica própria em Araquari/SC
-            </p>
             <h1 className="font-heading text-3xl md:text-4xl lg:text-[2.9rem] font-bold leading-[1.15] tracking-tight mb-6 text-balance">
               Estruturas metálicas e pré-moldados, do projeto à montagem
               <span className="text-accent-light">.</span>
@@ -82,7 +78,7 @@ export function Hero() {
             </p>
             <Link
               href="/obras"
-              className="inline-flex items-center gap-2 text-white font-heading font-medium border-b-2 border-white/25 hover:border-accent hover:text-accent pb-1 transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              className="inline-flex items-center gap-2 text-accent-light font-heading font-medium border-b-2 border-accent-light/40 hover:border-accent-light hover:text-white pb-1 transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
             >
               Ver obras realizadas
               <ArrowRight className="w-4 h-4" />

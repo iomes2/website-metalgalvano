@@ -166,7 +166,9 @@ export default async function Home() {
                 return (
                   <li
                     key={segment.label}
-                    className="group flex flex-col items-center text-center gap-4"
+                    /* São 5 itens: no mobile (2 colunas) o último ocupa a
+                       linha inteira para ficar centralizado na tela */
+                    className="group flex flex-col items-center text-center gap-4 last:col-span-2 sm:last:col-span-1"
                   >
                     <Icon
                       aria-hidden
