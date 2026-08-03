@@ -594,17 +594,4 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra23-weg/8AB9A69A-7B5B-4A34-BEB3-1D1B382211C8_L0_001-04_05_2023 19_58_50 (2).jpg",
     ],
   },
-  {
-    slug: "bmw",
-    title: "Obra BMW",
-    location: "Araquari/SC",
-    client: "BMW",
-    type: "Estrutura Metálica",
-    description: "",
-    coverImage: "/images/obra24-bmw/bmw-2.jpg",
-    images: [
-      "/images/obra24-bmw/bmw-1.jpg",
-      "/images/obra24-bmw/bmw-2.jpg",
-    ],
-  },
 ];
