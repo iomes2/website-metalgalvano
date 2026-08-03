@@ -422,12 +422,12 @@ export const PORTFOLIO_OBRAS: Obra[] = [
   },
   {
     slug: "acats-florianopolis",
-    title: "ACATS — Envelopamento em ACM",
+    title: "ACATS — Revestimento em ACM",
     location: "Florianópolis/SC",
     client: "ACATS",
     type: "Fachada ACM",
     description:
-      "A estrutura metálica através da engenharia estrutural atende aos múltiplos padrões exigentes da arquitetura moderna. A Metalgalvano é especialista em executar obras alinhando os mais exigentes padrões. Estrutura metálica para envelopamento do prédio da Associação Catarinense de Supermercados em ACM.",
+      "A estrutura metálica através da engenharia estrutural atende aos múltiplos padrões exigentes da arquitetura moderna. A Metalgalvano é especialista em executar obras alinhando os mais exigentes padrões. Estrutura metálica para revestimento do prédio da Associação Catarinense de Supermercados em ACM.",
     highlights: [
       "3.000m² de estrutura metálica com revestimento em ACM 4mm",
       "16.000 kg de estrutura",
