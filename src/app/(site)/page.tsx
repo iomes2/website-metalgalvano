@@ -15,13 +15,11 @@ import {
   ArrowUpRight,
   CheckCircle2,
 } from "lucide-react";
-import {
-  SERVICES,
-  SEGMENTS,
-  STATS,
-  CLIENTS,
-  PORTFOLIO_OBRAS,
-} from "@/lib/constants";
+import { SERVICES, SEGMENTS, STATS, CLIENTS } from "@/lib/constants";
+import { sanityFetch } from "@/sanity/fetch";
+import { imageUrl } from "@/sanity/image";
+import { featuredObrasQuery } from "@/sanity/queries";
+import type { ObraCard } from "@/sanity/types";
 import { Hero } from "@/components/Hero";
 import { CTASection } from "@/components/CTASection";
 import { AboutCarousel } from "@/components/AboutCarousel";
@@ -40,7 +38,10 @@ const iconMap: Record<string, React.ElementType> = {
   Factory,
 };
 
-export default function Home() {
+export default async function Home() {
+  // Sempre 6: destacadas primeiro, completadas pelas mais recentes.
+  const obras = await sanityFetch<ObraCard[]>(featuredObrasQuery);
+
   return (
     <>
       <Hero />
@@ -165,7 +166,9 @@ export default function Home() {
                 return (
                   <li
                     key={segment.label}
-                    className="group flex flex-col items-center text-center gap-4"
+                    /* São 5 itens: no mobile (2 colunas) o último ocupa a
+                       linha inteira para ficar centralizado na tela */
+                    className="group flex flex-col items-center text-center gap-4 last:col-span-2 sm:last:col-span-1"
                   >
                     <Icon
                       aria-hidden
@@ -274,7 +277,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PORTFOLIO_OBRAS.slice(0, 6).map((obra) => (
+            {obras.map((obra) => (
               <Link
                 key={obra.slug}
                 href={`/obras/${obra.slug}`}
@@ -282,8 +285,8 @@ export default function Home() {
               >
                 <div className="aspect-[16/10] bg-muted relative overflow-hidden">
                   <Image
-                    src={obra.coverImage}
-                    alt={obra.title}
+                    src={imageUrl(obra.coverImage, 400)}
+                    alt={obra.coverImage.alt || obra.title}
                     width={400}
                     height={250}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

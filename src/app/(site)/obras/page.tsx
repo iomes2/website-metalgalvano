@@ -3,7 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/PageHero";
 import { CTASection } from "@/components/CTASection";
-import { PORTFOLIO_OBRAS } from "@/lib/constants";
+import { sanityFetch } from "@/sanity/fetch";
+import { imageUrl } from "@/sanity/image";
+import { obrasCountQuery, obrasListQuery } from "@/sanity/queries";
+import type { ObraCard } from "@/sanity/types";
 
 export const metadata: Metadata = {
   title: "Obras Realizadas",
@@ -11,13 +14,18 @@ export const metadata: Metadata = {
     "Conheça as obras realizadas pela Metalgalvano: galpões metálicos, coberturas, fachadas ACM, escadas e mais em Joinville, Araquari, Curitiba e outras cidades.",
 };
 
-export default function ObrasPage() {
+export default async function ObrasPage() {
+  const [obras, total] = await Promise.all([
+    sanityFetch<ObraCard[]>(obrasListQuery),
+    sanityFetch<number>(obrasCountQuery),
+  ]);
+
   return (
     <>
       <PageHero
         badge="Portfólio"
         title="Obras realizadas"
-        subtitle={`Mais de ${PORTFOLIO_OBRAS.length} projetos entregues em Santa Catarina, Paraná e todo o Brasil.`}
+        subtitle={`Mais de ${total} projetos entregues em Santa Catarina, Paraná e todo o Brasil.`}
       />
 
       <section className="relative py-20 bg-surface overflow-hidden">
@@ -37,7 +45,7 @@ export default function ObrasPage() {
 
         <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            {PORTFOLIO_OBRAS.map((obra) => (
+            {obras.map((obra) => (
               <Link
                 key={obra.slug}
                 href={`/obras/${obra.slug}`}
@@ -45,8 +53,8 @@ export default function ObrasPage() {
               >
                 <div className="aspect-[16/10] bg-muted relative overflow-hidden">
                   <Image
-                    src={obra.coverImage}
-                    alt={obra.title}
+                    src={imageUrl(obra.coverImage, 600)}
+                    alt={obra.coverImage.alt || obra.title}
                     width={600}
                     height={375}
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -84,9 +92,9 @@ export default function ObrasPage() {
                     </span>
                   </p>
 
-                  {obra.highlights?.[0] && (
+                  {obra.highlight && (
                     <p className="mt-3 pt-3 border-t border-border text-sm text-primary font-heading font-medium">
-                      {obra.highlights[0]}
+                      {obra.highlight}
                     </p>
                   )}
 

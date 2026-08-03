@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const lexend = Lexend({
   variable: "--font-heading",
@@ -62,12 +59,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${lexend.variable} ${sourceSans.variable}`} suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col antialiased">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppButton />
-      </body>
+      <body className="min-h-screen flex flex-col antialiased">{children}</body>
     </html>
   );
 }

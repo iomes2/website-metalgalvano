@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, MapPin, CheckCircle2, ArrowRight } from "lucide-react";
-import { PORTFOLIO_OBRAS } from "@/lib/constants";
+import { sanityFetch } from "@/sanity/fetch";
+import { imageUrl } from "@/sanity/image";
+import { obraBySlugQuery, obrasSlugsQuery } from "@/sanity/queries";
+import type { ObraDetail } from "@/sanity/types";
 
 export async function generateStaticParams() {
-  return PORTFOLIO_OBRAS.map((obra) => ({
-    slug: obra.slug,
-  }));
+  const slugs = await sanityFetch<string[]>(obrasSlugsQuery);
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -17,19 +19,23 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const obra = PORTFOLIO_OBRAS.find((o) => o.slug === slug);
+  const obra = await sanityFetch<ObraDetail | null>(obraBySlugQuery, { slug });
 
   if (!obra) {
     return { title: "Obra não encontrada" };
   }
 
+  // Campos da aba SEO têm prioridade; vazios, cai no conteúdo da obra.
+  const title = obra.seoTitle || `${obra.title} — Obras Metalgalvano`;
+  const description = obra.seoDescription || obra.description.substring(0, 160);
+
   return {
-    title: `${obra.title} — Obras Metalgalvano`,
-    description: obra.description.substring(0, 160),
+    title,
+    description,
     openGraph: {
-      title: obra.title,
-      description: obra.description.substring(0, 160),
-      images: [{ url: obra.coverImage }],
+      title,
+      description,
+      images: [{ url: imageUrl(obra.coverImage, 1200) }],
     },
   };
 }
@@ -40,19 +46,21 @@ export default async function ObraDetailPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const obra = PORTFOLIO_OBRAS.find((o) => o.slug === slug);
+  const obra = await sanityFetch<ObraDetail | null>(obraBySlugQuery, { slug });
 
   if (!obra) {
     notFound();
   }
+
+  const images = obra.images ?? [];
 
   return (
     <>
       {/* Hero com imagem de capa */}
       <section className="relative h-[50vh] min-h-[400px] bg-primary-dark">
         <Image
-          src={obra.coverImage}
-          alt={obra.title}
+          src={imageUrl(obra.coverImage, 1600)}
+          alt={obra.coverImage.alt || obra.title}
           fill
           className="object-cover opacity-60"
           priority
@@ -166,21 +174,21 @@ export default async function ObraDetailPage({
       </section>
 
       {/* Galeria de Fotos */}
-      {obra.images.length > 1 && (
+      {images.length > 1 && (
         <section className="py-16 bg-surface">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14">
             <h2 className="font-heading text-2xl font-bold text-foreground mb-8">
               Galeria de Fotos
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {obra.images.map((image, i) => (
+              {images.map((image, i) => (
                 <div
-                  key={image}
+                  key={image._key ?? image.asset._ref}
                   className="aspect-[16/10] rounded-xl overflow-hidden bg-muted"
                 >
                   <Image
-                    src={image}
-                    alt={`${obra.title} — Foto ${i + 1}`}
+                    src={imageUrl(image, 600)}
+                    alt={image.alt || `${obra.title} — Foto ${i + 1}`}
                     width={600}
                     height={375}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"

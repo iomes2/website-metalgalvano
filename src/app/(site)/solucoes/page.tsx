@@ -89,13 +89,12 @@ export default function SolucoesPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-border border border-border">
-            {/* Células vazias para fechar a última linha da grade */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {SOLUCOES.map((sol, i) => (
               <Link
                 key={sol.title}
                 href={sol.href}
-                className="group relative flex flex-col bg-white hover:bg-surface transition-colors duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-accent"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-white hover:bg-surface hover:border-accent/50 transition-colors duration-300 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-primary-dark">
                   <Image
@@ -144,11 +143,6 @@ export default function SolucoesPage() {
                 </div>
               </Link>
             ))}
-            {Array.from({ length: (3 - (SOLUCOES.length % 3)) % 3 }).map(
-              (_, i) => (
-                <div key={`filler-${i}`} aria-hidden className="hidden md:block bg-white" />
-              ),
-            )}
           </div>
         </div>
       </section>
