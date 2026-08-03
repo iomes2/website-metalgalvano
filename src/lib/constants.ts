@@ -593,4 +593,24 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra23-weg/8AB9A69A-7B5B-4A34-BEB3-1D1B382211C8_L0_001-04_05_2023 19_58_50 (2).jpg",
     ],
   },
+  {
+    slug: "sesi-videira",
+    title: "Escola SESI — Videira",
+    location: "Videira/SC",
+    client: "SESI",
+    type: "Cobertura Metálica",
+    description:
+      "Foi finalizada a cobertura e ACM da Escola SESI na cidade de Videira/SC. Foram construídos 1.455m² de estrutura metálica para cobertura e 521,97m² de estrutura metálica revestida em ACM 4mm.",
+    highlights: [
+      "1.455m² de estrutura metálica para cobertura",
+      "521,97m² de estrutura metálica revestida em ACM 4mm",
+    ],
+    coverImage: "/images/obra25-sesi-videira/sesi-videira-1.jpg",
+    images: [
+      "/images/obra25-sesi-videira/sesi-videira-1.jpg",
+      "/images/obra25-sesi-videira/sesi-videira-2.jpg",
+      "/images/obra25-sesi-videira/sesi-videira-3.jpg",
+      "/images/obra25-sesi-videira/sesi-videira-4.jpg",
+    ],
+  },
 ];
