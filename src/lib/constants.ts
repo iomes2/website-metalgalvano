@@ -389,7 +389,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "Guarita e passarela",
       "Brises e ACM",
     ],
-    coverImage: "/images/obra13-escola-s/escola-s-1.jpg",
+    coverImage: "/images/obra13-escola-s/escola-s-5.jpg",
     images: [
       "/images/obra13-escola-s/escola-s-1.jpg",
       "/images/obra13-escola-s/escola-s-2.jpg",
@@ -399,7 +399,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra13-escola-s/escola-s-6.jpg",
       "/images/obra13-escola-s/escola-s-7.jpg",
       "/images/obra13-escola-s/escola-s-8.jpg",
-      "/images/obra13-escola-s/escola-s-9.jpg",
     ],
   },
   {
