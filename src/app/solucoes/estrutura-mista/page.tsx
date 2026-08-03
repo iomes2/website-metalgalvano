@@ -15,7 +15,7 @@ export default function EstruturaMistaPage() {
       subtitle="A combinação ideal de aço e concreto para máxima versatilidade."
       description={[
         "A estrutura mista combina as vantagens das estruturas metálicas com as do concreto, oferecendo soluções versáteis e econômicas para diferentes tipos de obras.",
-        "Esse sistema construtivo permite maior flexibilidade de projeto, aproveitando a resistência do aço em vãos maiores e a robustez do concreto em fundações e fechamentos.",
+        "Esse sistema construtivo permite maior flexibilidade de projeto, aproveitando a resistência do aço em vãos maiores e a robustez do concreto em fundações e fechamentos. É o sistema aplicado em obras como o Galpão do Condomínio BHW, em Araquari.",
       ]}
       features={[
         "Combinação de aço e concreto",
@@ -24,6 +24,16 @@ export default function EstruturaMistaPage() {
         "Economia em materiais",
         "Aplicação em edifícios e galpões",
         "Redução de peso na estrutura",
+      ]}
+      images={[
+        {
+          src: "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
+          alt: "Galpão do Condomínio BHW com pilares de concreto e treliças metálicas",
+        },
+        {
+          src: "/images/obra10-condominio-bhw-araquari/bhw-5.jpeg",
+          alt: "Interior do galpão do Condomínio BHW, com pilares de concreto e cobertura em treliças metálicas",
+        },
       ]}
     />
   );

@@ -269,7 +269,7 @@ export default function Home() {
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
               Conheça alguns dos nossos projetos entregues em diversas cidades de
-              Santa Catarina, Paraná e todo o Brasil.
+              Santa Catarina e todo o Brasil.
             </p>
           </div>
 

@@ -1,6 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+
+export interface ServiceImage {
+  src: string;
+  alt: string;
+}
 
 interface ServicePageProps {
   badge: string;
@@ -10,6 +16,7 @@ interface ServicePageProps {
   features: string[];
   ctaText?: string;
   heroImage?: string;
+  images?: ServiceImage[];
 }
 
 export function ServicePage({
@@ -20,6 +27,7 @@ export function ServicePage({
   features,
   ctaText = "Solicitar orçamento",
   heroImage,
+  images = [],
 }: ServicePageProps) {
   return (
     <>
@@ -43,7 +51,13 @@ export function ServicePage({
                 </p>
               ))}
 
-              <div className="mt-8 space-y-3">
+              <div
+                className={
+                  images.length > 2
+                    ? "mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3"
+                    : "mt-8 space-y-3"
+                }
+              >
                 {features.map((item) => (
                   <div key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
@@ -61,17 +75,42 @@ export function ServicePage({
               </Link>
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center">
-                <p className="text-muted-foreground text-sm">
-                  Foto do serviço
-                </p>
-              </div>
-              <div className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center">
-                <p className="text-muted-foreground text-sm">
-                  Foto do serviço
-                </p>
-              </div>
+            <div
+              className={
+                images.length > 2
+                  ? "grid grid-cols-2 gap-6"
+                  : "grid grid-cols-1 gap-6"
+              }
+            >
+              {images.length > 0
+                ? images.map((img) => (
+                    <div
+                      key={img.src}
+                      className="relative rounded-2xl aspect-[4/3] overflow-hidden bg-muted"
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        sizes={
+                          images.length > 2
+                            ? "(max-width: 1024px) 50vw, 25vw"
+                            : "(max-width: 1024px) 100vw, 50vw"
+                        }
+                        className="object-cover"
+                      />
+                    </div>
+                  ))
+                : [0, 1].map((i) => (
+                    <div
+                      key={i}
+                      className="bg-muted rounded-2xl aspect-[4/3] flex items-center justify-center"
+                    >
+                      <p className="text-muted-foreground text-sm">
+                        Foto do serviço
+                      </p>
+                    </div>
+                  ))}
             </div>
           </div>
         </div>

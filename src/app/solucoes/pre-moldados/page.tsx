@@ -20,8 +20,7 @@ export default function PreMoldadosPage() {
       features={[
         "Pilares e vigas pré-fabricadas",
         "Lajes e painéis de fechamento",
-        "Muros pré-moldados",
-        "Pisos industriais",
+        "Placas pré-moldadas",
         "Redução no tempo de execução",
         "Menor geração de resíduos",
       ]}

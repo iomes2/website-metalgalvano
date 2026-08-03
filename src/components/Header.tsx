@@ -39,7 +39,7 @@ export function Header() {
             <div className="flex items-center gap-6">
               <span className="flex items-center gap-1.5">
                 <Phone className="w-3.5 h-3.5" />
-                {COMPANY.phones[0]} | {COMPANY.phones[1]}
+                {COMPANY.whatsapp.comercial.label}
               </span>
               <span>{COMPANY.email}</span>
             </div>

@@ -34,7 +34,7 @@ export function Hero() {
   }
 
   const inputClass =
-    "w-full px-4 py-3.5 rounded-lg bg-white/5 border border-white/15 text-white placeholder:text-white/40 transition-colors duration-200 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 hover:border-white/25";
+    "w-full px-3.5 py-2.5 text-sm rounded-md bg-white/5 border border-white/15 text-white placeholder:text-white/40 transition-colors duration-200 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/30 hover:border-white/25";
 
   return (
     <section className="relative bg-primary-dark text-white overflow-hidden flex flex-col">
@@ -49,7 +49,7 @@ export function Hero() {
       >
         <source src="/video-estrutura-home.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/85 to-primary-dark/55" />
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/80 to-primary-dark/40" />
 
       {/* Hairlines verticais — grade técnica */}
       <div
@@ -91,14 +91,14 @@ export function Hero() {
 
           {/* Card de orçamento */}
           <div className="lg:col-span-5">
-            <div className="rounded-2xl bg-white/[0.06] border border-white/12 backdrop-blur-md p-6 sm:p-8 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.5)]">
-              <h2 className="font-heading text-xl font-bold mb-1">
+            <div className="w-full max-w-sm lg:ml-auto rounded-xl bg-white/[0.04] border border-white/10 backdrop-blur-sm p-5 shadow-[0_16px_40px_-24px_rgba(0,0,0,0.5)]">
+              <h2 className="font-heading text-lg font-bold mb-1">
                 Solicite seu orçamento
               </h2>
-              <p className="text-sm text-white/60 mb-6">
+              <p className="text-xs text-white/60 mb-4">
                 Preencha e fale direto com nossa equipe comercial.
               </p>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-2.5">
                 <div>
                   <label htmlFor="hero-nome" className="sr-only">
                     Seu nome
@@ -143,16 +143,16 @@ export function Hero() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-lg font-heading font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent-hover text-white px-6 py-3 text-sm rounded-md font-heading font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 >
                   Solicitar Orçamento
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </form>
-              <p className="text-xs text-white/50 text-center mt-4">
+              <p className="text-[11px] leading-snug text-white/50 text-center mt-3">
                 Resposta em até 24h úteis. Seus dados não são compartilhados.
               </p>
-              <p className="flex items-center justify-center gap-2 text-xs text-white/50 text-center mt-2">
+              <p className="flex items-center justify-center gap-2 text-[11px] text-white/50 text-center mt-1.5">
                 <span
                   aria-hidden
                   className="w-1.5 h-1.5 rounded-full bg-emerald-400"

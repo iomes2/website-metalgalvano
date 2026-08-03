@@ -34,7 +34,7 @@ const SOLUCOES = [
     description:
       "Elementos pré-fabricados em concreto para construção rápida, com menor geração de resíduos e acabamento padronizado.",
     href: "/solucoes/pre-moldados",
-    image: "/images/obra-crematorio-angelus.jpg",
+    image: "/images/obra-hacasa.jpg",
     imageAlt: "Edificação concluída executada pela Metalgalvano, vista aérea",
   },
   {
@@ -43,9 +43,9 @@ const SOLUCOES = [
     description:
       "Combinação de estruturas metálicas com concreto, proporcionando versatilidade construtiva e economia de materiais.",
     href: "/solucoes/estrutura-mista",
-    image: "/images/obra-hacasa.jpg",
+    image: "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
     imageAlt:
-      "Obra combinando estrutura metálica e elementos de concreto, vista aérea",
+      "Galpão do Condomínio BHW em Araquari, combinando estrutura metálica e concreto",
   },
   {
     icon: Blinds,

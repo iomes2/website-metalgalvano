@@ -6,9 +6,9 @@ export const COMPANY = {
     "Projetos, fabricação e montagem de estruturas metálicas e pré-moldados com qualidade e transparência.",
   address: "BR 280, km 26, 6.571 - Araquari/SC",
   cep: "89.245-000",
-  phones: ["(47) 3433-4164", "(47) 3063-2130"],
+  phones: ["(47) 3433-4164"],
   whatsapp: {
-    comercial: { number: "554730632130", label: "(47) 3063-2130" },
+    comercial: { number: "5547991804291", label: "(47) 99180-4291" },
     financeiro: { number: "554734334164", label: "(47) 3433-4164" },
     rh: { number: "5547992223536", label: "(47) 99222-3536" },
   },
@@ -20,7 +20,7 @@ export const COMPANY = {
     youtube:
       "https://www.youtube.com/channel/UCN7zdOnI8RGL3Dq3nQp4hdQ",
     pinterest: "https://br.pinterest.com/metalgalvano",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/company/metalgalvano/",
   },
 } as const;
 
@@ -39,7 +39,7 @@ export const NAV_LINKS = [
     ],
   },
   { label: "Obras", href: "/obras" },
-  { label: "Blog", href: "/blog" },
+  { label: "Carreiras", href: "/carreiras" },
   { label: "Contato", href: "/contato" },
 ] as const;
 
@@ -149,7 +149,6 @@ export interface Obra {
 }
 
 export const PORTFOLIO_OBRAS: Obra[] = [
-,
   {
     slug: "escola-s-joinville",
     title: "Escola SESI",
@@ -175,7 +174,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra13-escola-s/escola-s-8.jpg",
     ],
   },
-,
   {
     slug: "vila-germanica",
     title: "Espaço Vila Germânica — Oktoberfest",
@@ -191,7 +189,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     coverImage: "/images/obra2-vila-germanica/vila-germanica-1.jpg",
     images: ["/images/obra2-vila-germanica/vila-germanica-1.jpg"],
   },
-,
   {
     slug: "condominio-bhw",
     title: "Galpão Condomínio BHW",
@@ -208,12 +205,10 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     images: [
       "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
       "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
-      "/images/obra10-condominio-bhw-araquari/bhw-3.jpeg",
       "/images/obra10-condominio-bhw-araquari/bhw-4.jpeg",
       "/images/obra10-condominio-bhw-araquari/bhw-5.jpeg",
     ],
   },
-,
   {
     slug: "cei-manoel-antonio",
     title: "CEI Manoel Antônio da Rosa",
@@ -225,7 +220,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     coverImage: "/images/obra4-cei/cei-1.jpeg",
     images: ["/images/obra4-cei/cei-1.jpeg"],
   },
-,
   {
     slug: "core-internacional",
     title: "Coree International School",
@@ -251,7 +245,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra6-escola-internacional-core-e/core-internacional-4.jpeg",
     ],
   },
-,
   {
     slug: "sede-aab-wood",
     title: "Nova Sede ABB Wood",
@@ -269,7 +262,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra19-sede-aab-wood/aab-wood-2.jpg",
     ],
   },
-,
   {
     slug: "jbs-florianopolis",
     title: "Fachada JBS",
@@ -296,7 +288,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra7-jbs/jbs-9.jpeg",
     ],
   },
-,
   {
     slug: "escritorio-krona",
     title: "Fachada Grupo Krona",
@@ -318,7 +309,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra8-escritorio-krona/krona-4.jpeg",
     ],
   },
-,
   {
     slug: "transligue-blumenau",
     title: "Alpendre Metálico Transligue",
@@ -341,7 +331,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra9-transligue/transligue-4.jpg",
     ],
   },
-,
   {
     slug: "galpao-marina",
     title: "Galpão Industrial — Bairro Cubatão",
@@ -360,7 +349,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra3-galpao-marina/galpao-marina-2.jpg",
     ],
   },
-,
   {
     slug: "tigre-alagoas",
     title: "Obra Tigre",
@@ -377,7 +365,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra11-tigre-alagoas/tigre-4.jpg",
     ],
   },
-,
   {
     slug: "udesc-joinville",
     title: "Alpendre UDESC",
@@ -409,7 +396,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     coverImage: "/images/obra1-quadra-escola/quadra-escola-1.jpg",
     images: ["/images/obra1-quadra-escola/quadra-escola-1.jpg"],
   },
-,
   {
     slug: "praca-angelo-piazera",
     title: "Praça Angêlo Piazera",
@@ -429,7 +415,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra14-praca-angelo/praca-angelo-8.jpg",
     ],
   },
-,
   {
     slug: "acats-florianopolis",
     title: "ACATS — Revestimento em ACM",
@@ -450,7 +435,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra15-acats/acats-4.jpg",
     ],
   },
-,
   {
     slug: "tupy-galpao",
     title: "Galpão Tupy",
@@ -472,7 +456,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra16-tupy/tupy-3.jpg",
     ],
   },
-,
   {
     slug: "agora-tech-park",
     title: "Ágora Tech Park",
@@ -493,7 +476,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra17-agora-tech-park/agora-tech-park-5.jpeg",
     ],
   },
-,
   {
     slug: "almeida-junior-bc",
     title: "Balneário Shopping — Almeida Junior",
@@ -517,7 +499,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra18-almeida-junior-bc/almeida-junior-bc-6.jpg",
     ],
   },
-,
   {
     slug: "crematorio-angelus",
     title: "Crematório Angelus",
@@ -539,7 +520,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra5-crematorio-angelus/crematorio-angelus-2.jpg",
     ],
   },
-,
   {
     slug: "cooperativa-juriti",
     title: "Nova Sede Cooperativa Juriti",
@@ -563,7 +543,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra20-cooperativa-juriti/cooperativa-juriti-3.jpg",
     ],
   },
-,
   {
     slug: "arcelor-mittal",
     title: "ArcelorMittal",
@@ -587,7 +566,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra21-arcelor-mittal/arcelor-mittal-3.jpeg",
     ],
   },
-,
   {
     slug: "whirlpool",
     title: "Obra Whirlpool",
@@ -600,7 +578,6 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra22-whirlpool/publiinsta.jpg",
     ],
   },
-,
   {
     slug: "weg",
     title: "Obra WEG",
