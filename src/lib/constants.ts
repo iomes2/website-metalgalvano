@@ -335,7 +335,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "40.000m² de estrutura metálica",
       "Fechamento metálico completo",
     ],
-    coverImage: "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
+    coverImage: "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
     images: [
       "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
       "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
