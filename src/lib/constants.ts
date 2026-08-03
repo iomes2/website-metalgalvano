@@ -352,7 +352,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     type: "Estrutura Metálica",
     description:
       "Projeto executado para a Tigre em Alagoas. Estruturas metálicas de alta qualidade com a excelência e o padrão Metalgalvano.",
-    coverImage: "/images/obra11-tigre-alagoas/tigre-1.jpg",
+    coverImage: "/images/obra11-tigre-alagoas/tigre-4.jpg",
     images: [
       "/images/obra11-tigre-alagoas/tigre-1.jpg",
       "/images/obra11-tigre-alagoas/tigre-2.jpg",
