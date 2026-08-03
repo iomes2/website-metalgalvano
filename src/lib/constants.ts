@@ -315,7 +315,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "Revestimento em ACM",
       "Estética moderna",
     ],
-    coverImage: "/images/obra9-transligue/transligue-1.jpg",
+    coverImage: "/images/obra9-transligue/transligue-3.jpg",
     images: [
       "/images/obra9-transligue/transligue-1.jpg",
       "/images/obra9-transligue/transligue-2.jpg",
