@@ -506,12 +506,12 @@ export const PORTFOLIO_OBRAS: Obra[] = [
   },
   {
     slug: "sede-aab-wood",
-    title: "Nova Sede AAB Wood",
+    title: "Nova Sede ABB Wood",
     location: "Santa Cecília/SC",
-    client: "AAB Wood",
+    client: "ABB Wood",
     type: "Galpão Metálico",
     description:
-      "Estamos fazendo parte desse grande projeto: Nova sede da empresa AAB Wood na cidade de Santa Cecília - SC, o empreendimento conta com mais de 19 mil m² de construção. Temos orgulho de participar, contribuindo para fomentar a economia do nosso estado.",
+      "Estamos fazendo parte desse grande projeto: Nova sede da empresa ABB Wood na cidade de Santa Cecília - SC, o empreendimento conta com mais de 19 mil m² de construção. Temos orgulho de participar, contribuindo para fomentar a economia do nosso estado.",
     highlights: [
       "Mais de 19.000m² de construção",
     ],
