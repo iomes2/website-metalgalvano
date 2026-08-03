@@ -378,7 +378,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
   },
   {
     slug: "escola-s-joinville",
-    title: "Escola S",
+    title: "Escola SESI",
     location: "Joinville/SC",
     type: "Estrutura Metálica",
     description:
@@ -389,7 +389,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "Guarita e passarela",
       "Brises e ACM",
     ],
-    coverImage: "/images/obra13-escola-s/escola-s-5.jpg",
+    coverImage: "/images/obra13-escola-s/escola-s-1.jpg",
     images: [
       "/images/obra13-escola-s/escola-s-1.jpg",
       "/images/obra13-escola-s/escola-s-2.jpg",
