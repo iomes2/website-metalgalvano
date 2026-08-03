@@ -8,7 +8,7 @@ export const COMPANY = {
   cep: "89.245-000",
   phones: ["(47) 3433-4164", "(47) 3063-2130"],
   whatsapp: {
-    comercial: { number: "5547991804291", label: "(47) 99180-4291" },
+    comercial: { number: "554730632130", label: "(47) 3063-2130" },
     financeiro: { number: "554734334164", label: "(47) 3433-4164" },
     rh: { number: "5547992223536", label: "(47) 99222-3536" },
   },
@@ -83,7 +83,7 @@ export const SERVICES = [
 
 export const SEGMENTS = [
   { label: "Shoppings Centers", icon: "Store" },
-  { label: "Geração de Energia", icon: "SunMedium" },
+  { label: "Fachadas Industriais e Comerciais", icon: "Building2" },
   { label: "Ginásios Poliesportivos", icon: "Volleyball" },
   { label: "Construção Civil", icon: "HardHat" },
   { label: "Galpões Industriais", icon: "Factory" },
@@ -149,21 +149,33 @@ export interface Obra {
 }
 
 export const PORTFOLIO_OBRAS: Obra[] = [
+,
   {
-    slug: "quadra-escola",
-    title: "Quadra de Escola — Cobertura e ACM",
-    location: "Santa Catarina",
+    slug: "escola-s-joinville",
+    title: "Escola SESI",
+    location: "Joinville/SC",
     type: "Estrutura Metálica",
     description:
-      "Na Metalgalvano, transformamos planejamento em resultados, entregando estruturas metálicas com qualidade, segurança e pontualidade. Cada projeto entregue reforça nosso compromisso com a excelência, a confiança dos nossos clientes e a busca constante pelos melhores resultados.",
+      "Grande obra finalizada pela equipe Metalgalvano. Um empreendimento de referência para a cidade de Joinville e o estado de Santa Catarina, com mais de 10 mil m² de estrutura metálica, incluindo coberturas, fechamentos, guarita, passarela, brises e ACM.",
     highlights: [
-      "950 m² de estrutura metálica para cobertura",
-      "448 m² de estrutura metálica para fechamento",
-      "193 m² de revestimento em ACM",
+      "Mais de 10.000m² de estrutura metálica",
+      "Coberturas e fechamentos",
+      "Guarita e passarela",
+      "Brises e ACM",
     ],
-    coverImage: "/images/obra1-quadra-escola/quadra-escola-1.jpg",
-    images: ["/images/obra1-quadra-escola/quadra-escola-1.jpg"],
+    coverImage: "/images/obra13-escola-s/escola-s-1.jpg",
+    images: [
+      "/images/obra13-escola-s/escola-s-1.jpg",
+      "/images/obra13-escola-s/escola-s-2.jpg",
+      "/images/obra13-escola-s/escola-s-3.jpg",
+      "/images/obra13-escola-s/escola-s-4.jpg",
+      "/images/obra13-escola-s/escola-s-5.jpg",
+      "/images/obra13-escola-s/escola-s-6.jpg",
+      "/images/obra13-escola-s/escola-s-7.jpg",
+      "/images/obra13-escola-s/escola-s-8.jpg",
+    ],
   },
+,
   {
     slug: "vila-germanica",
     title: "Espaço Vila Germânica — Oktoberfest",
@@ -179,24 +191,29 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     coverImage: "/images/obra2-vila-germanica/vila-germanica-1.jpg",
     images: ["/images/obra2-vila-germanica/vila-germanica-1.jpg"],
   },
+,
   {
-    slug: "galpao-marina",
-    title: "Galpão Industrial — Bairro Cubatão",
-    location: "Joinville/SC",
+    slug: "condominio-bhw",
+    title: "Galpão Condomínio BHW",
+    location: "Araquari/SC",
+    client: "BHW",
     type: "Galpão Metálico",
     description:
-      "Concluímos a construção de um galpão, alpendre e fechamento industrial no bairro Cubatão, em Joinville. O galpão foi executado com 5.095m² de estrutura metálica. Tudo executado com estrutura metálica de alta qualidade, garantindo agilidade, segurança e durabilidade para o cliente.",
+      "Mais uma grande obra da Metalgalvano. Executamos um galpão com 40.000m² no Condomínio BHW, em Araquari. Foram executados 40.000m² de estrutura metálica e fechamento metálico.",
     highlights: [
-      "3.762m² de galpão metálico",
-      "678m² de alpendre metálico",
-      "655m² de fechamento",
+      "40.000m² de estrutura metálica",
+      "Fechamento metálico completo",
     ],
-    coverImage: "/images/obra3-galpao-marina/galpao-marina-1.jpg",
+    coverImage: "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
     images: [
-      "/images/obra3-galpao-marina/galpao-marina-1.jpg",
-      "/images/obra3-galpao-marina/galpao-marina-2.jpg",
+      "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
+      "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
+      "/images/obra10-condominio-bhw-araquari/bhw-3.jpeg",
+      "/images/obra10-condominio-bhw-araquari/bhw-4.jpeg",
+      "/images/obra10-condominio-bhw-araquari/bhw-5.jpeg",
     ],
   },
+,
   {
     slug: "cei-manoel-antonio",
     title: "CEI Manoel Antônio da Rosa",
@@ -208,27 +225,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
     coverImage: "/images/obra4-cei/cei-1.jpeg",
     images: ["/images/obra4-cei/cei-1.jpeg"],
   },
-  {
-    slug: "crematorio-angelus",
-    title: "Crematório Angelus",
-    location: "Santa Catarina",
-    client: "Angelus",
-    type: "Estrutura Metálica",
-    description:
-      "Orgulho de ter participado desta obra. Projeto completo com estrutura metálica, cobertura em telha sanduíche, plataforma metálica, escada marinheiro e marquise metálica revestida em ACM.",
-    highlights: [
-      "2.000m² de estrutura metálica",
-      "Cobertura em telha sanduíche PIR 30mm",
-      "Plataforma metálica",
-      "Escada marinheiro",
-      "Marquise metálica revestida em ACM",
-    ],
-    coverImage: "/images/obra5-crematorio-angelus/crematorio-angelus-1.jpg",
-    images: [
-      "/images/obra5-crematorio-angelus/crematorio-angelus-1.jpg",
-      "/images/obra5-crematorio-angelus/crematorio-angelus-2.jpg",
-    ],
-  },
+,
   {
     slug: "core-internacional",
     title: "Coree International School",
@@ -254,6 +251,25 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra6-escola-internacional-core-e/core-internacional-4.jpeg",
     ],
   },
+,
+  {
+    slug: "sede-aab-wood",
+    title: "Nova Sede ABB Wood",
+    location: "Santa Cecília/SC",
+    client: "ABB Wood",
+    type: "Galpão Metálico",
+    description:
+      "Estamos fazendo parte desse grande projeto: Nova sede da empresa ABB Wood na cidade de Santa Cecília - SC, o empreendimento conta com mais de 19 mil m² de construção. Temos orgulho de participar, contribuindo para fomentar a economia do nosso estado.",
+    highlights: [
+      "Mais de 19.000m² de construção",
+    ],
+    coverImage: "/images/obra19-sede-aab-wood/aab-wood-1.jpg",
+    images: [
+      "/images/obra19-sede-aab-wood/aab-wood-1.jpg",
+      "/images/obra19-sede-aab-wood/aab-wood-2.jpg",
+    ],
+  },
+,
   {
     slug: "jbs-florianopolis",
     title: "Fachada JBS",
@@ -280,6 +296,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra7-jbs/jbs-9.jpeg",
     ],
   },
+,
   {
     slug: "escritorio-krona",
     title: "Fachada Grupo Krona",
@@ -301,6 +318,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra8-escritorio-krona/krona-4.jpeg",
     ],
   },
+,
   {
     slug: "transligue-blumenau",
     title: "Alpendre Metálico Transligue",
@@ -323,27 +341,26 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra9-transligue/transligue-4.jpg",
     ],
   },
+,
   {
-    slug: "condominio-bhw",
-    title: "Galpão Condomínio BHW",
-    location: "Araquari/SC",
-    client: "BHW",
+    slug: "galpao-marina",
+    title: "Galpão Industrial — Bairro Cubatão",
+    location: "Joinville/SC",
     type: "Galpão Metálico",
     description:
-      "Mais uma grande obra da Metalgalvano. Executamos um galpão com 40.000m² no Condomínio BHW, em Araquari. Foram executados 40.000m² de estrutura metálica e fechamento metálico.",
+      "Concluímos a construção de um galpão, alpendre e fechamento industrial no bairro Cubatão, em Joinville. O galpão foi executado com 5.095m² de estrutura metálica. Tudo executado com estrutura metálica de alta qualidade, garantindo agilidade, segurança e durabilidade para o cliente.",
     highlights: [
-      "40.000m² de estrutura metálica",
-      "Fechamento metálico completo",
+      "3.762m² de galpão metálico",
+      "678m² de alpendre metálico",
+      "655m² de fechamento",
     ],
-    coverImage: "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
+    coverImage: "/images/obra3-galpao-marina/galpao-marina-1.jpg",
     images: [
-      "/images/obra10-condominio-bhw-araquari/bhw-1.jpg",
-      "/images/obra10-condominio-bhw-araquari/bhw-2.jpg",
-      "/images/obra10-condominio-bhw-araquari/bhw-3.jpeg",
-      "/images/obra10-condominio-bhw-araquari/bhw-4.jpeg",
-      "/images/obra10-condominio-bhw-araquari/bhw-5.jpeg",
+      "/images/obra3-galpao-marina/galpao-marina-1.jpg",
+      "/images/obra3-galpao-marina/galpao-marina-2.jpg",
     ],
   },
+,
   {
     slug: "tigre-alagoas",
     title: "Obra Tigre",
@@ -360,6 +377,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra11-tigre-alagoas/tigre-4.jpg",
     ],
   },
+,
   {
     slug: "udesc-joinville",
     title: "Alpendre UDESC",
@@ -376,31 +394,22 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra12-udesc/udesc-4.jpg",
     ],
   },
-  {
-    slug: "escola-s-joinville",
-    title: "Escola SESI",
-    location: "Joinville/SC",
+{
+    slug: "quadra-escola",
+    title: "Quadra de Escola — Cobertura e ACM",
+    location: "Santa Catarina",
     type: "Estrutura Metálica",
     description:
-      "Grande obra finalizada pela equipe Metalgalvano. Um empreendimento de referência para a cidade de Joinville e o estado de Santa Catarina, com mais de 10 mil m² de estrutura metálica, incluindo coberturas, fechamentos, guarita, passarela, brises e ACM.",
+      "Na Metalgalvano, transformamos planejamento em resultados, entregando estruturas metálicas com qualidade, segurança e pontualidade. Cada projeto entregue reforça nosso compromisso com a excelência, a confiança dos nossos clientes e a busca constante pelos melhores resultados.",
     highlights: [
-      "Mais de 10.000m² de estrutura metálica",
-      "Coberturas e fechamentos",
-      "Guarita e passarela",
-      "Brises e ACM",
+      "950 m² de estrutura metálica para cobertura",
+      "448 m² de estrutura metálica para fechamento",
+      "193 m² de revestimento em ACM",
     ],
-    coverImage: "/images/obra13-escola-s/escola-s-1.jpg",
-    images: [
-      "/images/obra13-escola-s/escola-s-1.jpg",
-      "/images/obra13-escola-s/escola-s-2.jpg",
-      "/images/obra13-escola-s/escola-s-3.jpg",
-      "/images/obra13-escola-s/escola-s-4.jpg",
-      "/images/obra13-escola-s/escola-s-5.jpg",
-      "/images/obra13-escola-s/escola-s-6.jpg",
-      "/images/obra13-escola-s/escola-s-7.jpg",
-      "/images/obra13-escola-s/escola-s-8.jpg",
-    ],
+    coverImage: "/images/obra1-quadra-escola/quadra-escola-1.jpg",
+    images: ["/images/obra1-quadra-escola/quadra-escola-1.jpg"],
   },
+,
   {
     slug: "praca-angelo-piazera",
     title: "Praça Angêlo Piazera",
@@ -420,6 +429,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra14-praca-angelo/praca-angelo-8.jpg",
     ],
   },
+,
   {
     slug: "acats-florianopolis",
     title: "ACATS — Revestimento em ACM",
@@ -440,6 +450,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra15-acats/acats-4.jpg",
     ],
   },
+,
   {
     slug: "tupy-galpao",
     title: "Galpão Tupy",
@@ -461,6 +472,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra16-tupy/tupy-3.jpg",
     ],
   },
+,
   {
     slug: "agora-tech-park",
     title: "Ágora Tech Park",
@@ -481,6 +493,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra17-agora-tech-park/agora-tech-park-5.jpeg",
     ],
   },
+,
   {
     slug: "almeida-junior-bc",
     title: "Balneário Shopping — Almeida Junior",
@@ -504,23 +517,29 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra18-almeida-junior-bc/almeida-junior-bc-6.jpg",
     ],
   },
+,
   {
-    slug: "sede-aab-wood",
-    title: "Nova Sede ABB Wood",
-    location: "Santa Cecília/SC",
-    client: "ABB Wood",
-    type: "Galpão Metálico",
+    slug: "crematorio-angelus",
+    title: "Crematório Angelus",
+    location: "Santa Catarina",
+    client: "Angelus",
+    type: "Estrutura Metálica",
     description:
-      "Estamos fazendo parte desse grande projeto: Nova sede da empresa ABB Wood na cidade de Santa Cecília - SC, o empreendimento conta com mais de 19 mil m² de construção. Temos orgulho de participar, contribuindo para fomentar a economia do nosso estado.",
+      "Orgulho de ter participado desta obra. Projeto completo com estrutura metálica, cobertura em telha sanduíche, plataforma metálica, escada marinheiro e marquise metálica revestida em ACM.",
     highlights: [
-      "Mais de 19.000m² de construção",
+      "2.000m² de estrutura metálica",
+      "Cobertura em telha sanduíche PIR 30mm",
+      "Plataforma metálica",
+      "Escada marinheiro",
+      "Marquise metálica revestida em ACM",
     ],
-    coverImage: "/images/obra19-sede-aab-wood/aab-wood-1.jpg",
+    coverImage: "/images/obra5-crematorio-angelus/crematorio-angelus-1.jpg",
     images: [
-      "/images/obra19-sede-aab-wood/aab-wood-1.jpg",
-      "/images/obra19-sede-aab-wood/aab-wood-2.jpg",
+      "/images/obra5-crematorio-angelus/crematorio-angelus-1.jpg",
+      "/images/obra5-crematorio-angelus/crematorio-angelus-2.jpg",
     ],
   },
+,
   {
     slug: "cooperativa-juriti",
     title: "Nova Sede Cooperativa Juriti",
@@ -544,6 +563,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra20-cooperativa-juriti/cooperativa-juriti-3.jpg",
     ],
   },
+,
   {
     slug: "arcelor-mittal",
     title: "ArcelorMittal",
@@ -567,6 +587,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra21-arcelor-mittal/arcelor-mittal-3.jpeg",
     ],
   },
+,
   {
     slug: "whirlpool",
     title: "Obra Whirlpool",
@@ -579,6 +600,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "/images/obra22-whirlpool/publiinsta.jpg",
     ],
   },
+,
   {
     slug: "weg",
     title: "Obra WEG",
