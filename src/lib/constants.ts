@@ -83,7 +83,6 @@ export const SERVICES = [
 
 export const SEGMENTS = [
   { label: "Shoppings Centers", icon: "Store" },
-  { label: "Geração de Energia", icon: "SunMedium" },
   { label: "Ginásios Poliesportivos", icon: "Volleyball" },
   { label: "Construção Civil", icon: "HardHat" },
   { label: "Galpões Industriais", icon: "Factory" },
