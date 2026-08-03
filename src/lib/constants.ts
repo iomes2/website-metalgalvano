@@ -83,7 +83,7 @@ export const SERVICES = [
 
 export const SEGMENTS = [
   { label: "Shoppings Centers", icon: "Store" },
-  { label: "Fachadas Comerciais e Industriais", icon: "Building" },
+  { label: "Geração de Energia", icon: "SunMedium" },
   { label: "Ginásios Poliesportivos", icon: "Volleyball" },
   { label: "Construção Civil", icon: "HardHat" },
   { label: "Galpões Industriais", icon: "Factory" },
@@ -246,7 +246,7 @@ export const PORTFOLIO_OBRAS: Obra[] = [
       "2 escadas metálicas",
     ],
     coverImage:
-      "/images/obra6-escola-internacional-core-e/core-internacional-1.jpeg",
+      "/images/obra6-escola-internacional-core-e/core-internacional-4.jpeg",
     images: [
       "/images/obra6-escola-internacional-core-e/core-internacional-1.jpeg",
       "/images/obra6-escola-internacional-core-e/core-internacional-2.jpeg",
