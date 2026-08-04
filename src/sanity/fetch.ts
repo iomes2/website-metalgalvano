@@ -1,19 +1,28 @@
-import { apiVersion, dataset, projectId } from "./env";
+import { OBRAS_TAG, apiVersion, dataset, projectId } from "./env";
 
 /**
- * Busca conteúdo no Sanity com cache do Next.
+ * Busca conteúdo no Sanity.
  *
- * Usa o `fetch` global em vez do cliente oficial (@sanity/client) porque só
- * assim o Next enxerga a requisição e consegue cachear a página.
+ * ⚠️ Usa `api.sanity.io`, NÃO `apicdn.sanity.io`. Isto é essencial e custou
+ * caro para descobrir: o CDN do Sanity guarda cada consulta por cerca de 30
+ * segundos e não é purgado no instante da publicação. Como o webhook chega em
+ * ~1 segundo, a página era regerada lendo ainda o conteúdo antigo — e então
+ * ficava congelada com ele até o cache expirar. Foi por isso que as tentativas
+ * anteriores de invalidação pareciam "não funcionar": o problema não estava no
+ * Next, estava na origem dos dados.
  *
- * `revalidate: 3600` define a validade do cache e é a rede de segurança: se o
- * webhook falhar, o conteúdo se atualiza sozinho em até 1 hora em vez de
- * congelar. A atualização imediata ao publicar vem de `revalidatePath`, em
- * /api/revalidate.
+ * Ler sem CDN é barato aqui porque a página só é montada quando o conteúdo
+ * muda (algumas vezes por mês), não a cada visita.
  *
- * ⚠️ Este cache sobrevive entre builds (fica em .next/cache). Um build feito
- * logo após uma edição pode sair com conteúdo de até 1 hora atrás; o webhook
- * corrige na sequência. Para forçar conteúdo novo num build, apague .next.
+ * São duas camadas de cache, e o webhook limpa as duas (ver /api/revalidate):
+ *   1. os dados — marcados com `OBRAS_TAG`;
+ *   2. a página pronta — regerada por `revalidatePath`.
+ *
+ * `revalidate: 3600` é a rede de segurança: se o webhook falhar, o conteúdo se
+ * atualiza sozinho em até 1 hora em vez de congelar.
+ *
+ * Regressão a testar em qualquer mudança aqui: alternar o mesmo campo duas
+ * vezes seguidas e conferir o site nas duas. Uma alternância só passa por sorte.
  */
 export async function sanityFetch<T>(
   query: string,
@@ -26,10 +35,10 @@ export async function sanityFetch<T>(
     search.set(`$${key}`, JSON.stringify(value));
   }
 
-  const url = `https://${projectId}.apicdn.sanity.io/v${apiVersion}/data/query/${dataset}?${search}`;
+  const url = `https://${projectId}.api.sanity.io/v${apiVersion}/data/query/${dataset}?${search}`;
 
   const response = await fetch(url, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 3600, tags: [OBRAS_TAG] },
   });
 
   if (!response.ok) {

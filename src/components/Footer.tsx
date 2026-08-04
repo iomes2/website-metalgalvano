@@ -7,7 +7,6 @@ export function Footer() {
   return (
     <footer className="bg-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 py-16">
-        {/* No mobile: navegação e soluções lado a lado; contato centralizado abaixo */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
           <div className="col-span-2 lg:col-span-1">
             <div className="mb-6">
@@ -119,7 +118,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 lg:col-span-1 flex flex-col items-center lg:items-start">
+          <div className="col-span-2 lg:col-span-1">
             <h3 className="font-heading font-semibold text-lg mb-6">
               Contato
             </h3>

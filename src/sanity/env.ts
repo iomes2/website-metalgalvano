@@ -24,3 +24,9 @@ export const dataset = required(
 
 /** Data fixa: congela o comportamento da API mesmo quando o Sanity evolui. */
 export const apiVersion = "2025-02-19";
+
+/**
+ * Marca as respostas do Sanity no cache do Next, para o webhook expirá-las
+ * ao publicar. Ver src/sanity/fetch.ts e src/app/api/revalidate/route.ts.
+ */
+export const OBRAS_TAG = "obras";
